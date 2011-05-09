@@ -1,0 +1,27 @@
+<%= f.label :sector, "Sector" %>
+<%= f.text_field :sector %>
+
+<%= f.label :country_code, "Country" %>  
+<%= f.country_select :country_code %>
+
+<%= f.label :owner_role, "Owner role" %>
+<%= f.text_field :owner_role %>
+
+<%= f.label :description, "Description" %>
+<%= f.text_area :description %>
+
+<%= f.label :practices, "Practices" %>
+<%= f.text_area :practices %>
+
+<%= f.label :obstacles, "Obstacles" %>
+<%= f.text_area :obstacles %>
+
+<%= f.label :start_date, "Start Date" %>
+<%= f.date_select :start_date, :discard_day => true %>
+
+<%= f.label :end_date, "End Date" %>
+<%= f.date_select :end_date, :discard_day => true %>
+
+<%= f.hidden_field :user_id, :value => current_user.id %>
+
+<%= f.submit "Submit" %>

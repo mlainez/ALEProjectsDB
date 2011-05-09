@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ALEProjectsDB</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+  <header>
+    <h1>ALEProjectsDB</h1>
+    <div id="login-box"> 
+      <% if current_user %>  
+        Welcome, <%= current_user.name %>!
+        <%= link_to "Sign out", signout_path %> 
+      <% else %>  
+        <%= link_to "Sign in with Linkedin", "/auth/linked_in" %>  
+      <% end %>  
+    </div>
+  </header>
+  
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <section id="container">
+    <%= yield %>
+  </section>
+</body>
+</html>

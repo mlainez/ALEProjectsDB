@@ -1,0 +1,9 @@
+<ul id="projects">
+<% @projects.each do |project| %>
+  <li class="project"><%= project.sector %>
+  <% if my_projects %>
+    <%= link_to "Edit", edit_project_path(project) %>
+  <% end %>
+  </li>
+<% end %>
+</ul>
