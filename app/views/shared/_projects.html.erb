@@ -9,6 +9,8 @@
     <td>
       <% if my_projects %>
         <%= link_to "Edit", edit_project_path(project) %>
+      <% else %>
+        <%= link_to project.user.name, project.user.linkedin_public_profile %>
       <% end %>
     </td>
   </tr>
