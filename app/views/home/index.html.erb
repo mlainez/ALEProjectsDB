@@ -1,6 +1,10 @@
-<%= link_to "Add a project", new_project_path %>
+<section id="home-call-to-action">
 
-<%= form_tag searches_path, :method => :get, :id => "search-box" do %>
-  <%= text_field_tag "search-field" %>
-  <%= submit_tag "Search" %>
-<% end %>
+  <p id='add-project-link'><%= link_to "Add a project", new_project_path %></p>
+
+  <%= form_tag searches_path, :method => :get, :id => "search-box" do %>
+      <%= text_field_tag "search-field" %>
+      <%= submit_tag "Search" %>
+  <% end %>
+
+</section>

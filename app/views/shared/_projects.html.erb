@@ -1,9 +1,16 @@
-<ul id="projects">
+<table id="projects">
 <% @projects.each do |project| %>
-  <li class="project"><%= project.sector %>
-  <% if my_projects %>
-    <%= link_to "Edit", edit_project_path(project) %>
-  <% end %>
-  </li>
+  <tr class="project">
+    <td><%= project.sector %></td>
+    <td><%= project.country_code %></td>
+    <td><%= project.practices %></td>
+    <td><%= project.obstacles %></td>
+    <td><%= project.owner_role %></td>
+    <td>
+      <% if my_projects %>
+        <%= link_to "Edit", edit_project_path(project) %>
+      <% end %>
+    </td>
+  </tr>
 <% end %>
-</ul>
+</table>

@@ -1,16 +1,100 @@
 body{
-  width: 960px;
+  width: 920px;
+  padding-top: 30px;
   margin: auto;
+  color: #333333;
+  font-family: verdana, sans-serif;
+  background-color: #eee;
+  padding-bottom: 30px;
 }
 
 header{
-  height: 60px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 30px 30px 30px 30px;
 }
 
 header h1{
-  font-size: 2em;
+  font-family: 'Carter One', arial, serif;
+  font-size: 2.6em;
+  margin-bottom: 10px;
 }
 
 header div#login-box{
   float: right;
 }
+
+header #search-top-box input[type='text']{
+  width: 300px;
+}
+
+section#container{
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 30px 30px 30px 30px;
+}
+
+section#container p#add-project-link{
+  float: left;
+}
+
+section#container form#search-box{
+  float: left;
+  margin-left: 30px;
+}
+
+p.label{
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+section#container h2{
+  font-size: 1.2em;
+}
+
+section#container h2 span.strong-text{
+  font-weight: bold;
+}
+
+table{
+  width: 100%;
+  margin: auto;
+  border: 1px solid black;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+table td{
+  border: 1px solid black;
+  padding: 5px;
+}
+
+#flash_notice, #flash_error {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+.notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.error {
+  background-color: #FCC;
+  border: solid 1px #C66;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+section#home-call-to-action{
+  width: 60%;
+  margin:auto;
+}
+
+section#home-call-to-action input[type='text']{
+  width: 300px;
+}
+

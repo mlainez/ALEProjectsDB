@@ -1,27 +1,30 @@
-<%= f.label :sector, "Sector" %>
-<%= f.text_field :sector %>
-
-<%= f.label :country_code, "Country" %>  
-<%= f.country_select :country_code %>
-
-<%= f.label :owner_role, "Owner role" %>
-<%= f.text_field :owner_role %>
-
-<%= f.label :description, "Description" %>
-<%= f.text_area :description %>
-
-<%= f.label :practices, "Practices" %>
-<%= f.text_area :practices %>
-
-<%= f.label :obstacles, "Obstacles" %>
-<%= f.text_area :obstacles %>
-
-<%= f.label :start_date, "Start Date" %>
-<%= f.date_select :start_date, :discard_day => true %>
-
-<%= f.label :end_date, "End Date" %>
-<%= f.date_select :end_date, :discard_day => true %>
-
-<%= f.hidden_field :user_id, :value => current_user.id %>
-
-<%= f.submit "Submit" %>
+<ul id="form-fields">
+  <li>
+    <p class="label"><%= f.label :sector, "Sector" %></p>
+    <p><%= f.text_field :sector %></p>
+  </li>
+  <li>
+    <p class="label"><%= f.label :country_code, "Country" %></p>
+    <p><%= f.country_select :country_code %></p>
+  </li>
+  <li>
+    <p class="label"><%= f.label :owner_role, "Owner role" %></p>
+    <p><%= f.text_field :owner_role %></p>
+  </li>
+  <li>
+    <p class="label"><%= f.label :description, "Description" %></p>
+    <p><%= f.text_area :description %></p>
+  </li>
+  <li>
+    <p class="label"><%= f.label :practices, "Practices" %></p>
+    <p><%= f.text_area :practices %></p>
+  </li>
+  <li>
+    <p class="label"><%= f.label :obstacles, "Obstacles" %></p>
+    <p><%= f.text_area :obstacles %></p>
+  </li>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+  <li>
+    <p><%= f.submit "Submit" %></p>
+  </li>
+</ul>

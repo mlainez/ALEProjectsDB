@@ -12,53 +12,41 @@ describe "projects/new.html.erb" do
   
   it "contains a drop down lost of european countries, what country code the project is in" do
     render
-    rendered.should have_xpath("//form/select[@id='project_country_code']")
+    rendered.should have_xpath("//form/ul/li/p/select[@id='project_country_code']")
   end
   
   it "contains a text area for the description of the project" do
     render
-    rendered.should have_xpath("//form/textarea[@id='project_description']")
+    rendered.should have_xpath("//form/ul/li/p/textarea[@id='project_description']")
   end
   
   it "contains a text area for the practices or tools used in the project" do
     render
-    rendered.should have_xpath("//form/textarea[@id='project_practices']")
+    rendered.should have_xpath("//form/ul/li/p/textarea[@id='project_practices']")
   end
   
   it "contains a text area for the obstacles met during the project" do
     render
-    rendered.should have_xpath("//form/textarea[@id='project_obstacles']")
+    rendered.should have_xpath("//form/ul/li/p/textarea[@id='project_obstacles']")
   end
   
   it "contains a text field for the sector in which the project takes place" do
     render
-    rendered.should have_xpath("//form/input[@id='project_sector']")
+    rendered.should have_xpath("//form/ul/li/p/input[@id='project_sector']")
   end
   
   it "contains a text field to specify the role of the project owner in that project" do
     render
-    rendered.should have_xpath("//form/input[@id='project_owner_role']")
-  end
-  
-  it "contains a date select to specify the start date of the project" do
-    render
-    rendered.should have_xpath("//form/select[@id='project_start_date_1i']")
-    rendered.should have_xpath("//form/select[@id='project_start_date_2i']")
-  end
-  
-  it "contains a date select to specify the end date of the project" do
-    render
-    rendered.should have_xpath("//form/select[@id='project_end_date_1i']")
-    rendered.should have_xpath("//form/select[@id='project_end_date_2i']")
+    rendered.should have_xpath("//form/ul/li/p/input[@id='project_owner_role']")
   end
   
   it "contains submit button for the form" do
     render
-    rendered.should have_xpath("//form/input[@type='submit']")
+    rendered.should have_xpath("//form/ul/li/p/input[@type='submit']")
   end
   
   it "contains a hidden field for the current user id" do
     render
-    rendered.should have_xpath("//form/input[@type='hidden']")
+    rendered.should have_xpath("//form/ul/input[@type='hidden']")
   end
 end

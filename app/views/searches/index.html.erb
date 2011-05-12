@@ -1,1 +1,6 @@
+<h2>Projects in the ALEProjectsDB responding to: <span class="strong-text"><%= params["search-field"] %></span></h2>
+
 <%= render :partial => 'shared/projects', :locals => {:my_projects => false} %>
+
+<p><%= link_to "Show all projects", projects_path %></p>
+<p><%= link_to "Add a project", new_project_path %></p>
