@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   before_filter :find_project, :only   => [:edit, :update]
   
   def index
-    @projects = Project.all
+    @projects = Project.all.paginate(:page => params[:page], :per_page => Project.per_page)
   end
   
   def new

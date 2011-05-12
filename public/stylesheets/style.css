@@ -45,6 +45,7 @@ section#container form#search-box{
 
 section#container h2{
   font-size: 1.2em;
+  margin-bottom: 10px;
 }
 
 section#container h2 span.strong-text{

@@ -7,11 +7,17 @@ describe SearchesController do
     
     before :each do
       Project.stub!(:search => projects)
+      projects.stub!(:paginate => projects)
     end
     
     it "searches the projects" do
       Project.should_receive(:search).with(params["search-field"])
       get :index, params
+    end
+    
+    it "should paginate the projects" do
+      projects.should_receive(:paginate)
+      get :index
     end
     
     it "assigns these projects" do

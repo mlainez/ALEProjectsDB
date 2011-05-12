@@ -8,6 +8,9 @@ class Project < ActiveRecord::Base
   validates_presence_of :practices
   validates_presence_of :obstacles
   
+  cattr_reader :per_page
+  @@per_page = 3
+  
   index do
     description
     sector

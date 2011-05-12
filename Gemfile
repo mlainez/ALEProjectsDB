@@ -5,6 +5,7 @@ gem 'rails',    '3.0.7'
 gem 'omniauth', :git => "git://github.com/intridea/omniauth.git"
 gem 'texticle', :git => "git://github.com/dukz/texticle.git"
 gem 'countries'
+gem 'will_paginate'
 
 group :test, :cucumber do
   gem 'cucumber-rails'

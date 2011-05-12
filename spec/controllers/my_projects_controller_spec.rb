@@ -10,6 +10,8 @@ describe MyProjectsController do
       session[:user_id] = user.id
       controller.stub!(:current_user).and_return(@current_user)
       user.stub!(:projects => projects)
+      projects.stub!(:all => projects)
+      projects.stub!(:paginate => projects)
     end
     
     it "renders the projects/index template" do
@@ -19,6 +21,16 @@ describe MyProjectsController do
 
     it "gets the user's project projects" do
       user.should_receive(:projects)
+      get :index
+    end
+    
+    it "queries all the user's projects" do
+      projects.should_receive(:all)
+      get :index
+    end
+    
+    it "should paginate the projects" do
+      projects.should_receive(:paginate)
       get :index
     end
 

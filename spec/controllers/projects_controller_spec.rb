@@ -7,6 +7,7 @@ describe ProjectsController do
     before :each do
       allow_message_expectations_on_nil
       Project.stub!(:all => projects)
+      projects.stub!(:paginate => projects)
     end
     
     it "renders the index template" do
@@ -16,6 +17,11 @@ describe ProjectsController do
     
     it "gets all projects" do
       Project.should_receive(:all)
+      get :index
+    end
+    
+    it "should paginate the projects" do
+      projects.should_receive(:paginate)
       get :index
     end
     

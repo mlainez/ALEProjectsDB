@@ -4,11 +4,13 @@ describe "projects/index.html.erb" do
   let(:user)     { mock_model(User) }
   let(:project1) { mock_model(Project, Factory.attributes_for(:project)) }
   let(:project2) { mock_model(Project, Factory.attributes_for(:project)) }
+  let(:projects) { [project1, project2] }
   
   before :each do
-    assign(:projects, [project1, project2])
+    assign(:projects, projects)
     project1.stub!(:user => user)
     project2.stub!(:user => user)
+    projects.stub!(:total_pages => 1)
     user.stub!(:name => "John Doe")
     user.stub!(:linkedin_public_profile => "http://www.example.com")
   end
