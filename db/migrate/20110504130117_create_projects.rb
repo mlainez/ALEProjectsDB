@@ -5,8 +5,8 @@ class CreateProjects < ActiveRecord::Migration
       t.string     :sector,       :null => false
       t.string     :country_code, :null => false      
       t.text       :description,  :null => false
-      t.string     :practices,    :null => false
-      t.string     :obstacles,    :null => false
+      t.text       :practices,    :null => false
+      t.text       :obstacles,    :null => false
       t.string     :owner_role,   :null => false
       t.date       :start_date
       t.date       :end_date
