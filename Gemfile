@@ -14,10 +14,6 @@ group :test, :cucumber do
   gem "rspec-rails", "~> 2.4"
   gem "webrat"
   gem 'factory_girl_rails'
-  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
-  gem 'guard-rspec'
-  gem 'guard-cucumber'
-  gem 'guard-spork'
   gem 'launchy'
 end
 
