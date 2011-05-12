@@ -9,7 +9,8 @@ class User < ActiveRecord::Base
     create! do |user|  
       user.provider = auth_hash["provider"]  
       user.uid = auth_hash["uid"]  
-      user.name = auth_hash["user_info"]["name"]  
+      user.name = auth_hash["user_info"]["name"]
+      user.linkedin_public_profile = auth_hash["user_info"]["public_profile_url"] 
     end  
   end
 end

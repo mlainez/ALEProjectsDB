@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110509210509) do
+ActiveRecord::Schema.define(:version => 20110511133119) do
 
   create_table "projects", :force => true do |t|
     t.integer "user_id",      :null => false
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20110509210509) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "linkedin_public_profile", :null => false
   end
 
 end

@@ -7,6 +7,7 @@ Feature: Agilists can add projects
     Given I am on the homepage
     Then I should see a link to add my projects
   
+  @omniauth_test
   Scenario: Agilists can add a project to the database
     Given I am on the homepage
     And I am logged in
