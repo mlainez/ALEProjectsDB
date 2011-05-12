@@ -1,1 +1,6 @@
+<h2>This is your project's list</h2>
+
 <%= render :partial => 'shared/projects', :locals => {:my_projects => true} %>
+
+<p><%= link_to "Add another project", new_project_path %></p>
+<p><%= link_to "Show all projects", projects_path %></p>

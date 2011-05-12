@@ -25,6 +25,6 @@
   </li>
   <%= f.hidden_field :user_id, :value => current_user.id %>
   <li>
-    <p><%= f.submit "Submit" %></p>
+    <p><%= f.submit "Submit" %> | <%= link_to "Go back", :back %></p>
   </li>
 </ul>

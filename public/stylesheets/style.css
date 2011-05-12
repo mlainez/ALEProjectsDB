@@ -43,17 +43,17 @@ section#container form#search-box{
   margin-left: 30px;
 }
 
-p.label{
-  margin-top: 10px;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
 section#container h2{
   font-size: 1.2em;
 }
 
 section#container h2 span.strong-text{
+  font-weight: bold;
+}
+
+p.label{
+  margin-top: 10px;
+  margin-bottom: 5px;
   font-weight: bold;
 }
 
@@ -63,6 +63,13 @@ table{
   border: 1px solid black;
   margin-top: 30px;
   margin-bottom: 30px;
+  font-size: 0.8em;
+}
+
+table thead th{
+  border: 1px solid black;
+  padding: 5px;
+  background-color: #eee;
 }
 
 table td{
@@ -96,5 +103,14 @@ section#home-call-to-action{
 
 section#home-call-to-action input[type='text']{
   width: 300px;
+}
+
+#form-fields li textarea{
+  height: 150px;
+  width: 800px;
+}
+
+#form-fields li input[type='text']{
+  width: 265px;
 }
 

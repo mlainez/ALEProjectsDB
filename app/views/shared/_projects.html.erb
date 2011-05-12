@@ -1,10 +1,25 @@
 <table id="projects">
+  <thead>
+    <th>Sector</th>
+    <th>Country</th>
+    <th>Description</th>
+    <th>Practices</th>
+    <th>Obstacles</th>
+    <th>Contact role</th>
+    <% if my_projects %>
+      <th>Actions</th>
+    <% else %>
+      <th>Contact</th>
+    <% end %>
+  </thead>
+  <tbody>
 <% @projects.each do |project| %>
   <tr class="project">
     <td><%= project.sector %></td>
     <td><%= project.country_code %></td>
-    <td><%= project.practices %></td>
-    <td><%= project.obstacles %></td>
+    <td><%= truncate project.description, :length => 150 %></td>
+    <td><%= truncate project.practices, :length => 150 %></td>
+    <td><%= truncate project.obstacles, :length => 150 %></td>
     <td><%= project.owner_role %></td>
     <td>
       <% if my_projects %>
