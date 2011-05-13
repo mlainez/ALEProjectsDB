@@ -2,16 +2,16 @@ require 'spec_helper'
 
 describe MyProjectsController do
   describe "GET index" do
-    let(:user)     { mock_model(User, :id => 1) }
-    let(:projects) { mock("Projects List") }
+    let(:user)               { mock_model(User, :id => 1) }
+    let(:projects)           { mock("Projects List") }
+    let(:paginated_projects) { mock("Paginated projects List") }
     
     before :each do
       @current_user = user
       session[:user_id] = user.id
       controller.stub!(:current_user).and_return(@current_user)
       user.stub!(:projects => projects)
-      projects.stub!(:all => projects)
-      projects.stub!(:paginate => projects)
+      projects.stub!(:all => projects, :paginate => paginated_projects)
     end
     
     it "renders the projects/index template" do
@@ -36,7 +36,7 @@ describe MyProjectsController do
 
     it "assigns the user's projects" do
       get :index
-      assigns[:projects].should eq projects
+      assigns[:projects].should eq paginated_projects
     end
   end
 end
