@@ -59,3 +59,13 @@ end
 Then /^I should not see any projects in the search results$/ do
   page.should_not have_content(@project.sector)
 end
+
+When /^I submit a project form with missing fields$/ do
+  fill_in("project_sector",      :with => "Government IT")
+  fill_in("project_description", :with => "Project description")
+  click_button("Submit")
+end
+
+Then /^I should see that the form could not be submitted$/ do
+  page.should have_content "Please fill in the missing fields"
+end

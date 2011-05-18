@@ -52,10 +52,15 @@ section#container h2 span.strong-text{
   font-weight: bold;
 }
 
-p.label{
+label{
+  display: block;
   margin-top: 10px;
   margin-bottom: 5px;
   font-weight: bold;
+}
+
+.field_with_errors label{
+  color: red;
 }
 
 table{
@@ -106,11 +111,11 @@ section#home-call-to-action input[type='text']{
   width: 300px;
 }
 
-#form-fields li textarea{
+#form-fields textarea{
   height: 150px;
   width: 800px;
 }
 
-#form-fields li input[type='text']{
+#form-fields input[type='text']{
   width: 265px;
 }

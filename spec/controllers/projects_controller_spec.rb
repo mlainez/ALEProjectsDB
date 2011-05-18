@@ -105,6 +105,11 @@ describe ProjectsController do
         assigns[:project].should eq project
       end
 
+      it "sets the flash to 'Please fill in the missing fields'" do
+        post :create
+        flash[:error].should eq "Please fill in the missing fields"
+      end
+
       it "renders the new template" do
         post :create
         response.should render_template("new")

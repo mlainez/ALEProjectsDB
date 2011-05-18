@@ -1,30 +1,30 @@
-<ul id="form-fields">
-  <li>
-    <p class="label"><%= f.label :sector, "Sector" %></p>
-    <p><%= f.text_field :sector %></p>
-  </li>
-  <li>
-    <p class="label"><%= f.label :country_code, "Country" %></p>
-    <p><%= f.country_select :country_code %></p>
-  </li>
-  <li>
-    <p class="label"><%= f.label :owner_role, "Owner role" %></p>
-    <p><%= f.text_field :owner_role %></p>
-  </li>
-  <li>
-    <p class="label"><%= f.label :description, "Description" %></p>
-    <p><%= f.text_area :description %></p>
-  </li>
-  <li>
-    <p class="label"><%= f.label :practices, "Practices" %></p>
-    <p><%= f.text_area :practices %></p>
-  </li>
-  <li>
-    <p class="label"><%= f.label :obstacles, "Obstacles" %></p>
-    <p><%= f.text_area :obstacles %></p>
-  </li>
+<div id="form-fields">
+  <div>
+    <%= f.label :sector, "Sector" %>
+    <%= f.text_field :sector %>
+  </div>
+  <div>
+    <%= f.label :country_code, "Country" %>
+    <%= f.country_select :country_code %>
+  </div>
+  <div>
+    <%= f.label :owner_role, "Owner role" %>
+    <%= f.text_field :owner_role %>
+  </div>
+  <div>
+    <%= f.label :description, "Description" %>
+    <%= f.text_area :description %>
+  </siv>
+  <div>
+    <%= f.label :practices, "Practices" %>
+    <%= f.text_area :practices %>
+  </div>
+  <div>
+    <%= f.label :obstacles, "Obstacles" %>
+    <%= f.text_area :obstacles %>
+  </div>
   <%= f.hidden_field :user_id, :value => current_user.id %>
-  <li>
-    <p><%= f.submit "Submit" %> | <%= link_to "Go back", :back %></p>
-  </li>
-</ul>
+  <div>
+    <%= f.submit "Submit" %> | <%= link_to "Go back", :back %>
+  </div>
+</div>

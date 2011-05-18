@@ -14,4 +14,11 @@ Feature: Agilists can add projects
     When I follow the link to add projects
     And I submit a filled in form
     Then I should see my project in the list of projects
+
+  @omniauth_test
+  Scenario: Agilists add project with missing required fileds
+    Given I am logged in
+    And I follow the link to add projects
+    When I submit a project form with missing fields
+    Then I should see that the form could not be submitted
     
