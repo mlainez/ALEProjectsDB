@@ -26,6 +26,8 @@
         <td>
           <% if my_projects %>
             <%= link_to "Edit", edit_project_path(project) %>
+            <%= link_to "Delete", my_project_path(project), :method =>
+            :delete, :class => "delete-project", :confirm => "Are you sure?" %>
           <% else %>
             <%= link_to project.user.name, project.user.linkedin_public_profile %>
           <% end %>

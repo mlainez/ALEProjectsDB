@@ -70,3 +70,11 @@ end
 Then /^I should see that the form could not be submitted$/ do
   page.should have_content "Please fill in the missing fields"
 end
+
+When /^I delete one of my projects$/ do
+  page.first("a.delete-project").click
+end
+
+Then /^I should not see that project in my projects list anymore$/ do
+  page.should_not have_selector("tr.project")
+end
