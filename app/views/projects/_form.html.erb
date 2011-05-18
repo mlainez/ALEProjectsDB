@@ -5,7 +5,7 @@
   </div>
   <div>
     <%= f.label :country_code, "Country" %>
-    <%= f.country_select :country_code %>
+    <%= f.country_select :country_code, nil, :include_blank => true %>
   </div>
   <div>
     <%= f.label :owner_role, "Owner role" %>

@@ -9,6 +9,7 @@ end
 When /^I submit a filled in form$/ do
   fill_in("project_sector",      :with => "Government IT")
   fill_in("project_description", :with => "Project description")
+  select("Belgium",              :from => 'project_country_code')
   fill_in("project_practices",   :with => "Scrum")
   fill_in("project_obstacles",   :with => "Management buy-in")
   fill_in("project_owner_role",  :with => "Developer")
