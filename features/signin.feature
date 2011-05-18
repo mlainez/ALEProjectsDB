@@ -9,3 +9,9 @@ Feature: Users log in through Linkedin
     Given I am on the homepage
     When I click on the sign in link
     Then I should see my linkedin name on the screen
+  
+  @omniauth_failure_test
+  Scenario: Authentication failed
+    Given I am on the homepage
+    When I click on the sign in link
+    Then I should see a message telling me my authentication failed

@@ -30,8 +30,8 @@
   </header>
   
   <section id="container">
-    <% if notice %><p class="notice"><%= notice %></p><% end %>
-    <% if alert %><p class="error"><%= error %></p><% end %>
+    <% if flash[:notice] %><p class="notice"><%= flash[:notice] %></p><% end %>
+    <% if flash[:error] %><p class="error"><%= flash[:error] %></p><% end %>
     
     <%= yield %>
   </section>

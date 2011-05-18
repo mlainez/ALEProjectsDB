@@ -16,3 +16,12 @@ end
 After('@omniauth_test') do
   OmniAuth.config.test_mode = false
 end
+
+Before('@omniauth_failure_test') do
+  OmniAuth.config.test_mode           = true
+  OmniAuth.config.mock_auth[:default] = :invalid_credentials
+end
+
+After('@omniauth_failure_test') do
+  OmniAuth.config.test_mode = false
+end

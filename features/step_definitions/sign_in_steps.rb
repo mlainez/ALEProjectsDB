@@ -18,3 +18,7 @@ Given /^I am logged in$/ do
   @user         = User.first
   @current_user = @user
 end
+
+Then /^I should see a message telling me my authentication failed$/ do
+  page.should have_content("Authentication failure")
+end
