@@ -17,6 +17,10 @@
   <tbody>
     <% @projects.each do |project| %>
       <tr class="project">
+        <td class="hidden-show-link">
+          <%= link_to "Show", project_path(project), :class =>
+          "show-link" %>
+        </td>
         <td><%= project.sector %></td>
         <td><%= project.country_code %></td>
         <td><%= truncate project.description, :length => 150 %></td>

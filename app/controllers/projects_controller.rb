@@ -1,6 +1,10 @@
 class ProjectsController < ApplicationController
-  before_filter :require_user, :except => [:index]
+  before_filter :require_user, :except => [:index, :show]
   before_filter :find_project, :only   => [:edit, :update]
+
+  def show
+    @project = Project.find(params[:id])
+  end
 
   def index
     @projects = Project.all.paginate(:page => params[:page], :per_page => Project.per_page)

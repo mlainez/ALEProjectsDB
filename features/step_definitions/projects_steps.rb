@@ -78,3 +78,13 @@ end
 Then /^I should not see that project in my projects list anymore$/ do
   page.should_not have_selector("tr.project")
 end
+
+When /^I click on a project row$/ do
+  page.first("tr.project").click
+end
+
+Then /^I should see the full detail for that project$/ do
+  current_path = URI.parse(current_url).path
+  current_path.should == project_path(@project)
+  page.should have_content @project.sector
+end

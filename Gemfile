@@ -16,6 +16,7 @@ group :test, :cucumber do
   gem "webrat"
   gem 'factory_girl_rails'
   gem 'launchy'
+  gem 'akephalos'
 end
 
 # Deploy with Capistrano

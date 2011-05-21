@@ -1,0 +1,33 @@
+<div id="project-detail">
+  <div>
+   <p class="label">Sector</p>
+    <p><%= @project.sector %></p>
+  </div>
+  <div>
+    <p class="label">Country</p>
+    <p><%= @project.country_code %></p>
+  </div>
+  <div>
+    <p class="label">Owner</p>
+    <p><%= link_to @project.user.name, @project.user.linkedin_public_profile %></p>
+  </div>
+  <div>
+    <p class="label">Owner role</p>
+    <p><%= @project.owner_role %></p>
+  </div>
+  <div>
+    <p class="label">Description</p>
+    <p><%= @project.description %></p>
+  </siv>
+  <div>
+    <p class="label">Practices</p>
+    <p><%= @project.practices %></p>
+  </div>
+  <div>
+    <p class="label">Obstacles</p>
+    <p><%= @project.obstacles %></p>
+  </div>
+  <div class="links">
+    <%= link_to "Go back", :back %>
+  </div>
+</div>

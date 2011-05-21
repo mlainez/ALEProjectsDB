@@ -119,3 +119,22 @@ section#home-call-to-action input[type='text']{
 #form-fields input[type='text']{
   width: 265px;
 }
+
+td.hidden-show-link{
+  display: none;
+}
+
+table#projects tr.project:hover{
+  background-color: #F5F1DE;
+  cursor: pointer;
+}
+
+div#project-detail p.label{
+   font-weight: bold;
+   margin-top: 15px;
+   margin-bottom: 10px;
+}
+
+div#project-detail div.links{
+   margin-top: 10px;
+}

@@ -1,6 +1,25 @@
 require 'spec_helper'
 
 describe ProjectsController do
+  describe "GET show" do
+    let(:params)  { { :id => rand(100) } }
+    let(:project) { mock_model(Project) }
+
+    before :each do
+      Project.stub!(:find => project)
+    end
+
+    it "finds the project based on the id passed as parameter" do
+      Project.should_receive(:find).with(params[:id])
+      get :show, params
+    end
+
+    it "assigns that project" do
+      get :show, params
+      assigns[:project].should eq project
+    end
+  end
+
   describe "GET index" do
     let(:projects)           { mock("Projects list") }
     let(:paginated_projects) { mock("Paginated projects") }
